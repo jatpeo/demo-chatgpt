@@ -1,0 +1,20 @@
+server:
+  port: 8888
+
+spring:
+  datasource:
+    url: jdbc:mysql://120.55.11.68:13306/state-owned-v2?characterEncoding=utf-8&serverTimezone=UTC
+    username: gzw
+    password: Gzw@DB#2020
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+# MyBatisPlus配置
+mybatis-plus:
+  #配置Mapper映射文件
+  mapper-locations: classpath*:mapper/*.xml
+  # 配置Mybatis数据返回类型别名（默认别名为类名）
+  type-aliases-package: org.yant.**.domain
+  configuration:
+    # 自动驼峰命名
+    map-underscore-to-camel-case: true
